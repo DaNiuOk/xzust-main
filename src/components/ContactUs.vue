@@ -15,7 +15,16 @@
                         border-bottom: 1px solid #444;
                     }
                     .el-menu-item.is-active{
-                        background: #00356B !important;
+                        background: rgb(247, 247, 247) !important;
+                    }
+                    .el-button--text {
+                        width: 100%;
+                        color: #fff;
+                        background-color: #00356B;
+                        border-radius: 0;
+                        text-align: left;
+                        padding: 0px 0px 0px 18px;
+                        line-height: 56px;
                     }
                 }
                 .right {
@@ -72,21 +81,20 @@
                 <el-breadcrumb separator-class="el-icon-arrow-right">
                     <el-breadcrumb-item><i class="el-icon-s-home" style="margin-right: 10px"></i>您当前的位置：</el-breadcrumb-item>
                     <el-breadcrumb-item>联系我们</el-breadcrumb-item>
-                    <el-breadcrumb-item>{{curTitle}}</el-breadcrumb-item>
+                    <el-breadcrumb-item>联系方式</el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <div class="content">
                 <div class="left">
-                   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="vetical"
-                       background-color="#F7F7F7" text-color="#444" active-text-color="#fff"
-                       @select="handleSelect"
+                   <el-button type="text">联系我们</el-button>
+                   <el-menu class="el-menu-demo" mode="vetical" default-active="phone"
+                       background-color="#F7F7F7" text-color="#444" active-text-color="#00356B"
                        >
-                       <el-menu-item class="left_title" index="us">联系我们</el-menu-item>
                        <el-menu-item class="left_title" index="phone">联系方式</el-menu-item>
                    </el-menu>
                 </div>
                 <div class="right">
-                    <div class="right_title">{{curTitle}}</div>
+                    <div class="right_title">联系方式</div>
                     <div class="link">
                         <p class="item">地址：西藏自治区林芝市巴宜区育才西路100号</p>
                         <p class="item">电话：0000-00000000</p>
@@ -108,23 +116,7 @@ export default {
     components: { Navigation, Footer, Banner, },
     data() {
         return {
-            activeIndex: "phone",
-            curTitle: '联系方式',
         }
     },
-    methods: {
-        handleSelect(key, keyPath) {
-            switch(key) {
-                case 'us' :
-                    this.curTitle = '联系我们'
-                    this.activeIndex = 'us'
-                break;
-                case 'phone' :
-                    this.curTitle = '联系方式'
-                    this.activeIndex = 'phone'
-                break;
-            }
-        },
-    }
 }
 </script>

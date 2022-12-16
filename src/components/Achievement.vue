@@ -15,7 +15,16 @@
                     border-bottom: 1px solid #444;
                 }
                 .el-menu-item.is-active{
-                    background: #00356B !important;
+                    background: rgb(247, 247, 247) !important;
+                }
+                .el-button--text {
+                    width: 100%;
+                    color: #fff;
+                    background-color: #00356B;
+                    border-radius: 0;
+                    text-align: left;
+                    padding: 0px 0px 0px 18px;
+                    line-height: 56px;
                 }
             }
             .right {
@@ -80,11 +89,11 @@
             </div>
             <div class="content">
                  <div class="left">
+                    <el-button type="text">业绩成果</el-button>
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="vetical"
-                        background-color="#F7F7F7" text-color="#444" active-text-color="#fff"
+                        background-color="#F7F7F7" text-color="#444" active-text-color="#00356B"
                         @select="handleSelect"
                         >
-                        <el-menu-item class="left_title" index="achieve">业绩成果</el-menu-item>
                         <el-menu-item class="left_title" index="paper">发表论文</el-menu-item>
                         <el-menu-item class="left_title" index="science">科研成果</el-menu-item>
                         <el-menu-item class="left_title" index="software">软件成果</el-menu-item>
@@ -178,17 +187,13 @@ export default {
     components: { Navigation, Banner, Footer, },
     data() {
         return {
-            activeIndex: "achieve",
-            curTitle: '业绩成果',
+            activeIndex: "paper",
+            curTitle: '发表论文',
         }
     },
     methods: {
         handleSelect(key, keyPath) {
             switch(key) {
-                case 'achieve':
-                     this.curTitle = '业绩成果'
-                    this.activeIndex = 'achieve'
-                break;
                 case 'paper' :
                     this.curTitle = '发表论文'
                     this.activeIndex = 'paper'

@@ -14,7 +14,16 @@
                 border-bottom: 1px solid #444;
             }
             .el-menu-item.is-active{
-                background: #00356B !important;
+                        background: rgb(247, 247, 247) !important;
+            }
+            .el-button--text {
+                width: 100%;
+                color: #fff;
+                background-color: #00356B;
+                border-radius: 0;
+                text-align: left;
+                padding: 0px 0px 0px 18px;
+                line-height: 56px;
             }
         }
         .right {
@@ -89,21 +98,20 @@
                 <el-breadcrumb separator-class="el-icon-arrow-right">
                     <el-breadcrumb-item><i class="el-icon-s-home" style="margin-right: 10px"></i>您当前的位置：</el-breadcrumb-item>
                     <el-breadcrumb-item>在研工作</el-breadcrumb-item>
-                    <el-breadcrumb-item>{{curTitle}}</el-breadcrumb-item>
+                    <el-breadcrumb-item>承担项目</el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <div class="content">
                 <div class="left">
-                   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="vetical"
-                       background-color="#F7F7F7" text-color="#444" active-text-color="#fff"
-                       @select="handleSelect"
+                   <el-button type="text">在研工作</el-button>
+                   <el-menu class="el-menu-demo" mode="vetical" default-active="assume"
+                       background-color="#F7F7F7" text-color="#444" active-text-color="#00356B"
                        >
-                       <el-menu-item class="left_title" index="work">在研工作</el-menu-item>
                        <el-menu-item class="left_title" index="assume">承担项目</el-menu-item>
                    </el-menu>
                 </div>
                 <div class="right">
-                    <div class="right_title">{{curTitle}}</div>
+                    <div class="right_title">承担项目</div>
                     <div class="simple">
                         <div class="block" v-for="(item, index) in workList" :key="index">
                             <div class="img"></div>
@@ -129,8 +137,6 @@ export default {
     components: { Navigation, Footer, Banner, },
     data() {
         return {
-            activeIndex: "assume",
-            curTitle: '承担项目',
             workList: [
                 { title: '这是标题', content: '文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字', btn: 'more' },
                 { title: '这是标题', content: '文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字', btn: 'more' },
@@ -141,19 +147,5 @@ export default {
             ]
         }
     },
-    methods: {
-        handleSelect(key, keyPath) {
-            switch(key) {
-                case 'work':
-                    this.curTitle = '在研工作'
-                    this.activeIndex = 'work'
-                break;
-                case 'assume' :
-                    this.curTitle = '承担项目'
-                    this.activeIndex = 'assume'
-                break;
-            }
-        }
-  }
 }
 </script>

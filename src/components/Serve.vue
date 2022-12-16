@@ -15,7 +15,16 @@
                     border-bottom: 1px solid #444;
                 }
                 .el-menu-item.is-active{
-                    background: #00356B !important;
+                        background: rgb(247, 247, 247) !important;
+                }
+                .el-button--text {
+                    width: 100%;
+                    color: #fff;
+                    background-color: #00356B;
+                    border-radius: 0;
+                    text-align: left;
+                    padding: 0px 0px 0px 18px;
+                    line-height: 56px;
                 }
             }
             .right {
@@ -119,8 +128,9 @@
             </div>
             <div class="content">
                  <div class="left">
+                    <el-button type="text">服务咨询</el-button>
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="vetical"
-                        background-color="#F7F7F7" text-color="#444" active-text-color="#fff"
+                        background-color="#F7F7F7" text-color="#444" active-text-color="#00356B"
                         @select="handleSelect"
                         >
                         <el-menu-item class="left_title" index="consult">业务咨询</el-menu-item>
