@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Achievement from '@/components/Achievement'
 import Work from '@/components/Work'
+import Research from '@/components/Research'
 import Serve from '@/components/Serve'
 import ContactUs from '@/components/ContactUs'
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/work',
       name: 'Work',
       component: Work
+    },
+    {
+      path: '/research',
+      name: 'Research',
+      component: Research
     },
     {
       path: '/serve',

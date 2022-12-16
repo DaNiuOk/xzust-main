@@ -69,10 +69,10 @@
         <el-menu-item class="first-title" index="/" route="/">首页</el-menu-item>
         <el-menu-item class="first-title" index="/achievement" route="/achievement">业绩成果</el-menu-item>
         <el-menu-item class="first-title" index="/work" route="/work">在研工作</el-menu-item>
+        <el-menu-item class="first-title" index="/research" route="/research">研发工作</el-menu-item>
         <el-menu-item class="first-title" index="/serve" route="/serve">服务咨询</el-menu-item>
         <el-menu-item class="first-title" index="/contactUs" route="/contactUs">联系我们</el-menu-item>
       </el-menu>
-      <!-- <el-button class="serch" icon="el-icon-search"></el-button> -->
        <div class="serch">
         <el-input
           placeholder="请输入内容"
