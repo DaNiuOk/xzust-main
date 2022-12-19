@@ -134,7 +134,8 @@
                         @select="handleSelect"
                         >
                         <el-menu-item class="left_title" index="consult">业务咨询</el-menu-item>
-                        <el-menu-item class="left_title" index="download">下载中心</el-menu-item>
+                        <el-menu-item class="left_title" index="textDownload">文件下载</el-menu-item>
+                        <el-menu-item class="left_title" index="softDownload">软件下载</el-menu-item>
                     </el-menu>
                  </div>
                  <div class="right">
@@ -170,8 +171,8 @@
                         </div>
                     </div>
                     <div :class="[activeIndex === 'download' ? 'show': 'noShow']">
-                        <div class="upList" v-for="(item, index) in upList" :key="index">
-                            <p>
+                        <div class="upList">
+                            <p v-for="(item, index) in upList" :key="index">
                                 <span class="name">{{item.name}}</span>
                                 <span class="time">{{item.time}}</span>
                             </p>
@@ -215,9 +216,14 @@ export default {
     methods: {
         handleSelect(key, keyPath) {
             switch(key) {
-                case 'download' :
+                case 'softDownload' :
                     this.curTitle = '下载中心'
-                    this.activeIndex = 'download'
+                    this.activeIndex = 'softDownload'
+                    this.banner = false
+                break;
+                case 'textDownload' :
+                    this.curTitle = '下载中心'
+                    this.activeIndex = 'textDownload'
                     this.banner = false
                 break;
                 case 'consult' :

@@ -7,7 +7,9 @@
       <div class="team-left">
         <div class="line"></div>
         <h3 class="team-title">团队简介</h3>
-        <div class="team-icon">About</div>
+        <router-link to='/team'>
+          <button class="team-icon">About</button>
+        </router-link>
       </div>
       <div class="team-right">
         <div class="team-text">
@@ -15,14 +17,11 @@
           字文字文文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文
           字文字文字文字文字字
         </div>
-        
       </div>
-
       </div>
     </div>
      <div class="cooperation">
        <div class="cooperation-box">
-         
       <div class="cooperation-left">
         <div class="line"></div>
         <h3 class="cooperation-title">合作单位</h3>
@@ -140,49 +139,6 @@ html{
   padding-left: 32px;
   padding-right: 32px;
 }
-.top{
-  box-sizing: border-box;
-  background: url(../assets/topbackg.jpg) no-repeat;
-  background-size:100% 100% ;
-  position: relative;
-  height: 677px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* text-align: center; */
-  overflow: hidden;
-  padding: 0 200px;
-}
-  .toptext{
-    display: inline-block;
-    margin-top: 20px;
-    width: 70%;
-    text-align: left;
-  }
-  .h-text{
-    display: inline-block;
-    color: #00356B;
-    font-size: 3em;
-    letter-spacing:20px;
-  }
-  .detil{
-    margin-top: 20px;
-    display: inline-block;
-    width:70%;
-    font-size: 1em;
-    text-align: left;
-    letter-spacing: 0.5em;
-    color:#333;
-  }
-  .starvidio{
-    background: url(../assets/bapfang.png) no-repeat;
-    background-size:100% 100% ;
-    position: absolute;
-    bottom: 20px;
-    right: 60px;
-    height: 60px;
-    width: 60px;
-  }
   .team{
     height: 366px;
     display: flex;
@@ -237,6 +193,7 @@ html{
     font-size: 1em;
     background: #00356B;
     border-radius: 25px;
+    padding: 0px;
   }
   .cooperation{
     height: 366px;

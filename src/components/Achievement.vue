@@ -104,26 +104,9 @@
                     <div class="right_title">{{curTitle}}</div>
                     <div :class="[activeIndex === 'paper' ? 'simple': 'noShow']">
                         <div class="literature">
-                            <p>(1)Qu naisi, Chu liangcheng, Guo yonggang, Perturbation of the Attached Water Mass Effect Offshore Platform Dynamic Response, China Ocean Engineering, Vol. 7, No. 4, 1993。</p>
-                            <p>(2)Guo yonggang, Qu naisi, Perturbation Analysis of the Non-proportional Damping Effect Structure under the Arbitrary Load, EPMESC, Macao, 1995。 </p>
-                            <p>(3)曲乃泗，初良成，郭永刚，动水非比例阻尼对平台结构影响的摄动分析，海洋通报，1994.12。</p>
-                            <p>(4)郭永刚，曲乃泗，非比例阻尼对结构动力响应影响的摄动分析方法，地震工程与工程振动，1995年4期。</p>
-                            <p>(5)郭永刚，董毓新，不同垫层材料对水轮机蜗壳结构的影响研究，大电机技术，1996年4期。 </p>
-                            <p>(6)水工结构中载荷识别的时域法。</p>
-                            <p>(7)掺入膨胀剂桩受力机理的试验研究。</p>
-                            <p>(8)动接触问题在高拱坝抗震中的应用。 </p>
-                            <p>(9)郭永刚，侯顺载，陈厚群等，高拱坝伸缩横缝的开合对拱座岩体稳定的影响研究，水利学报，2000年，第11期。 </p>
-                            <p>(10)郭永刚，张祁汉，三峡水电站厂房结构自振特性研究，水力发电，2002.1。 </p>
-                            <p>(11)郭永刚，周红卫等，大型渡槽结构减振隔振几个关键问题初探，现代地震工程进展，2002.10。 </p>
-                            <p>(12)郭永刚，胡晓等，300米级高拱坝振动台模型试验研究，现代地震工程进展，2002.10。 </p>
-                            <p>(13)郭永刚，涂劲，陈厚群，高拱坝伸缩横缝间布设阻尼器对坝体地震影响的研究，世界地震工程，2003.9。 </p>
-                            <p>(14)涂劲，郭永刚，陈厚群，高拱坝抗震钢筋配置方案研究，水利水电技术，2003.7。 </p>
-                            <p>(15)傅朝阳，郭永刚，李家峡水电站拱坝强震监测台阵的布设，水电自动化与大坝监测，2004.2。 </p>
-                            <p>(16)郭永刚，涂劲，陈厚群，抗震钢筋对小湾高拱坝抗震性能影响研究，水利学报，2004.3。 </p>
-                            <p>(17)郭永刚，赵晓飞等，考虑流—固耦合影响的挡水结构自振特性，世界地震工程，2004.9。 </p>
-                            <p>(18)马飞，郭永刚，水小平，基于小波理论的振动信号的多尺度分析，噪声与振动控制，2004年12月，第6期。</p>
+                            <p v-for="(p, index) in paperList" :key="index">{{p}}</p>
                         </div>
-                        <el-pagination background layout="prev, pager, next" :total="50"></el-pagination>
+                        <el-pagination layout="prev, pager, next" :total="50"></el-pagination>
                     </div>
                     <div :class="[activeIndex === 'science' ? 'simple': 'noShow']">
                         <div class="literature">
@@ -189,6 +172,26 @@ export default {
         return {
             activeIndex: "paper",
             curTitle: '发表论文',
+            paperList: [
+                '(1)Qu naisi, Chu liangcheng, Guo yonggang, Perturbation of the Attached Water Mass Effect Offshore Platform Dynamic Response, China Ocean Engineering, Vol. 7, No. 4, 1993。',
+                '(2)Guo yonggang, Qu naisi, Perturbation Analysis of the Non-proportional Damping Effect Structure under the Arbitrary Load, EPMESC, Macao, 1995。',
+                '(3)曲乃泗，初良成，郭永刚，动水非比例阻尼对平台结构影响的摄动分析，海洋通报，1994.12。',
+                '(4)郭永刚，曲乃泗，非比例阻尼对结构动力响应影响的摄动分析方法，地震工程与工程振动，1995年4期。',
+                '(5)郭永刚，董毓新，不同垫层材料对水轮机蜗壳结构的影响研究，大电机技术，1996年4期。',
+                '(6)水工结构中载荷识别的时域法。',
+                '(7)掺入膨胀剂桩受力机理的试验研究。',
+                '(8)动接触问题在高拱坝抗震中的应用。',
+                '(9)郭永刚，侯顺载，陈厚群等，高拱坝伸缩横缝的开合对拱座岩体稳定的影响研究，水利学报，2000年，第11期。',
+                '(10)郭永刚，张祁汉，三峡水电站厂房结构自振特性研究，水力发电，2002.1。',
+                '(11)郭永刚，周红卫等，大型渡槽结构减振隔振几个关键问题初探，现代地震工程进展，2002.10。',
+                '(12)郭永刚，胡晓等，300米级高拱坝振动台模型试验研究，现代地震工程进展，2002.10。',
+                '(13)郭永刚，涂劲，陈厚群，高拱坝伸缩横缝间布设阻尼器对坝体地震影响的研究，世界地震工程，2003.9。',
+                '(14)涂劲，郭永刚，陈厚群，高拱坝抗震钢筋配置方案研究，水利水电技术，2003.7。',
+                '(15)傅朝阳，郭永刚，李家峡水电站拱坝强震监测台阵的布设，水电自动化与大坝监测，2004.2。',
+                '(16)郭永刚，涂劲，陈厚群，抗震钢筋对小湾高拱坝抗震性能影响研究，水利学报，2004.3。',
+                '(17)郭永刚，赵晓飞等，考虑流—固耦合影响的挡水结构自振特性，世界地震工程，2004.9。',
+                '(18)马飞，郭永刚，水小平，基于小波理论的振动信号的多尺度分析，噪声与振动控制，2004年12月，第6期。',
+            ]
         }
     },
     methods: {

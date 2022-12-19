@@ -6,6 +6,7 @@ import Work from '@/components/Work'
 import Research from '@/components/Research'
 import Serve from '@/components/Serve'
 import ContactUs from '@/components/ContactUs'
+import Team from '@/components/Team'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/contactUs',
       name: 'ContactUs',
       component: ContactUs
+    },
+    {
+      path: '/team',
+      name: 'Team',
+      component: Team
     },
   ]
 })
