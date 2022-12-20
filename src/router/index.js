@@ -7,6 +7,7 @@ import Research from '@/views/Research'
 import Serve from '@/views/Serve'
 import ContactUs from '@/views/ContactUs'
 import Team from '@/views/Team'
+import SoftwareDetail from '@/views/SoftwareDetail'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/team',
       name: 'Team',
       component: Team
+    },
+    {
+      path: '/softwareDetail',
+      name: 'SoftwareDetail',
+      component: SoftwareDetail
     },
   ]
 })

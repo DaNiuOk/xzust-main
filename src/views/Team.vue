@@ -266,9 +266,6 @@ export default {
                 break;
             }
         },
-        onSubmit() {
-          console.log('submit!');
-        }
     }
 }
 </script>

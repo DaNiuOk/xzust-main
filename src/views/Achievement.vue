@@ -126,7 +126,9 @@
                     </div>
                     <div :class="[activeIndex === 'software' ? 'simple': 'noShow']">
                         <div class="block">
-                            地震<br />信息管理系统
+                            <router-link to='/softwareDetail'>
+                                地震<br />信息管理系统
+                            </router-link>
                         </div>
                         <div class="block">
                             滑坡<br />信息管理系统

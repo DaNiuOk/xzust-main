@@ -118,9 +118,11 @@ export default {
 body{
   margin:0;
   padding: 0;
+  box-sizing: border-box;
 }
 html{
   font-size: 16px;
+  box-sizing: border-box;
 }
 .el-menu-demo{
   height: 60px;
