@@ -51,6 +51,10 @@
                         color: #fff;
                         font-size: 33px;
                         text-align: center;
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                        }
                     }
                     p {
                         width: 100%;

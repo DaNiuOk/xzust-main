@@ -1,5 +1,14 @@
 <style lang="scss">
 .serve {
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: #00356B;
+    }
+    a {
+        color: #444;
+        text-decoration: none;
+    }
     .serveContent {
         padding: 34px 334px 68px 334px;
         .content {
@@ -118,6 +127,7 @@
     <div class="serve">
         <Navigation />
         <div :class="[banner ? 'show' : 'noShow']"><Banner /></div>
+        <div :class="[banner ? 'noShow' : 'line']"></div>
         <div class="serveContent">
             <div class="littleNav">
                 <el-breadcrumb separator-class="el-icon-arrow-right">
@@ -135,7 +145,7 @@
                         >
                         <el-menu-item class="left_title" index="consult">业务咨询</el-menu-item>
                         <el-menu-item class="left_title" index="textDownload">文件下载</el-menu-item>
-                        <el-menu-item class="left_title" index="softDownload">软件下载</el-menu-item>
+                        <el-menu-item class="left_title" index="softDownload"><router-link to='/softWareLoad'>软件下载</router-link></el-menu-item>
                     </el-menu>
                  </div>
                  <div class="right">
@@ -170,7 +180,7 @@
                             </el-form>
                         </div>
                     </div>
-                    <div :class="[activeIndex === 'download' ? 'show': 'noShow']">
+                    <div :class="[activeIndex === 'textDownload' ? 'show': 'noShow']">
                         <div class="upList">
                             <p v-for="(item, index) in upList" :key="index">
                                 <span class="name">{{item.name}}</span>
@@ -217,12 +227,12 @@ export default {
         handleSelect(key, keyPath) {
             switch(key) {
                 case 'softDownload' :
-                    this.curTitle = '下载中心'
+                    this.curTitle = '软件下载'
                     this.activeIndex = 'softDownload'
                     this.banner = false
                 break;
                 case 'textDownload' :
-                    this.curTitle = '下载中心'
+                    this.curTitle = '文件下载'
                     this.activeIndex = 'textDownload'
                     this.banner = false
                 break;

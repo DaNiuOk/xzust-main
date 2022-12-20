@@ -8,6 +8,7 @@ import Serve from '@/views/Serve'
 import ContactUs from '@/views/ContactUs'
 import Team from '@/views/Team'
 import SoftwareDetail from '@/views/SoftwareDetail'
+import SoftWareLoad from '@/views/SoftWareLoad'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/softwareDetail',
       name: 'SoftwareDetail',
       component: SoftwareDetail
+    },
+    {
+      path: '/softWareLoad',
+      name: 'SoftWareLoad',
+      component: SoftWareLoad
     },
   ]
 })
