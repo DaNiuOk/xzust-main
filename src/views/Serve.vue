@@ -186,9 +186,9 @@
 </template>
 
 <script>
-import Navigation from './component/Navigation'
-import Footer from './component/Footer'
-import Banner from './component/Banner'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import Banner from '../components/Banner'
 
 export default {
     components: { Navigation, Footer, Banner, },

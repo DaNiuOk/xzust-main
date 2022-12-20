@@ -75,9 +75,9 @@
 </template>
 
 <script>
-import Navigation from './component/Navigation';
-import Banner from './component/Banner';
-import Footer from './component/Footer';
+import Navigation from '../components/Navigation';
+import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 export default {
   components: { Navigation, Banner, Footer, },
   name: "Home",

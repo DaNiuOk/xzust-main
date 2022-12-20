@@ -108,8 +108,8 @@
 </template>
 
 <script>
-import Navigation from './component/Navigation'
-import Footer from './component/Footer'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 export default {
     components: { Navigation, Footer, },
     data() {

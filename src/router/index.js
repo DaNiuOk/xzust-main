@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Achievement from '@/components/Achievement'
-import Work from '@/components/Work'
-import Research from '@/components/Research'
-import Serve from '@/components/Serve'
-import ContactUs from '@/components/ContactUs'
-import Team from '@/components/Team'
+import Home from '@/views/Home'
+import Achievement from '@/views/Achievement'
+import Work from '@/views/Work'
+import Research from '@/views/Research'
+import Serve from '@/views/Serve'
+import ContactUs from '@/views/ContactUs'
+import Team from '@/views/Team'
 
 Vue.use(Router)
 
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
     },
     {
       path: '/achievement',
